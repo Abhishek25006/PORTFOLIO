@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ✅ Google Search Console Verification -->
+<meta name="google-site-verification" content="PASTE_YOUR_ACTUAL_CODE_HERE" />
+
+<title>Abhishek Jain Portfolio | BCA Student | Developer</title>
+
+<meta name="description" content="Abhishek Jain BCA student with CGPA 8 skilled in Java, Python, DBMS, OS, C and COA. Portfolio website.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.typing {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+/* Section */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.1);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Abhishek</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Hi, I'm Abhishek Jain</h1>
+    <p>I am a <span class="typing"></span></p>
+    <a href="#contact" class="btn">Contact Me</a>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>BCA Student (3rd Semester) with CGPA 8. Passionate about development and cybersecurity.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="cards">
+        <div class="card">Java</div>
+        <div class="card">Python</div>
+        <div class="card">DBMS</div>
+        <div class="card">Operating System</div>
+        <div class="card">C Programming</div>
+        <div class="card">Computer Architecture</div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: jainabhishek25006@gmail.com</p>
+</section>
+
+<footer>
+    <p>© 2026 Abhishek Jain</p>
+</footer>
+
+<script>
+const text = ["Developer", "BCA Student", "Cybersecurity Learner"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+    if(count === text.length){
+        count = 0;
+    }
+    currentText = text[count];
+    letter = currentText.slice(0, ++index);
+
+    document.querySelector(".typing").textContent = letter;
+
+    if(letter.length === currentText.length){
+        count++;
+        index = 0;
+        setTimeout(type, 1000);
+    } else {
+        setTimeout(type, 100);
+    }
+})();
+</script>
+
+</body>
+</html>
